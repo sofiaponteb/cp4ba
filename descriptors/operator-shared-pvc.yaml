@@ -20,7 +20,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: <StorageClassName>
+  storageClassName: operator-sc
   resources:
     requests:
       storage: 1Gi
@@ -37,7 +37,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: <Fast_StorageClassName>
+  storageClassName: operator-sc
   resources:
     requests:
       storage: 100Gi
