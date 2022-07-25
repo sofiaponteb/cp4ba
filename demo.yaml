@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    db2ucluster-cp4ba.databases.ibm.com/account-hash: 878f29797aac5b1fe4569d521adfc15d
+    mcm.ibm.com/accountID: id-mycluster-account
+    mcm.ibm.com/type: System
+    openshift.io/description: ""
+    openshift.io/display-name: ""
+    openshift.io/requester: IAM#ana.aponte@ibm.com
+    openshift.io/sa.scc.mcs: s0:c25,c20
+    openshift.io/sa.scc.supplemental-groups: 1000640000/10000
+    openshift.io/sa.scc.uid-range: 1000640000/10000
+  creationTimestamp: "2022-07-22T00:30:15Z"
+  deletionTimestamp: "2022-07-25T15:02:30Z"
+  labels:
+    kubernetes.io/metadata.name: cloud-pak-demo
+  name: cloud-pak-demo
+  resourceVersion: "4353258"
+  uid: c3bf0ce0-74ea-485b-b6e5-314a06b91ab9
+spec:
+  finalizers:
+status:
+  conditions:
+  - lastTransitionTime: "2022-07-25T15:02:49Z"
+    message: All resources successfully discovered
+    reason: ResourcesDiscovered
+    status: "False"
+    type: NamespaceDeletionDiscoveryFailure
+  - lastTransitionTime: "2022-07-25T15:02:49Z"
+    message: All legacy kube types successfully parsed
+    reason: ParsedGroupVersions
+    status: "False"
+    type: NamespaceDeletionGroupVersionParsingFailure
+  - lastTransitionTime: "2022-07-25T15:03:50Z"
+    message: All content successfully deleted, may be waiting on finalization
+    reason: ContentDeleted
+    status: "False"
+    type: NamespaceDeletionContentFailure
+  - lastTransitionTime: "2022-07-25T15:02:49Z"
+    message: 'Some resources are remaining: cartridges.core.automation.ibm.com has
+      1 resource instances'
+    reason: SomeResourcesRemain
+    status: "True"
+    type: NamespaceContentRemaining
+  - lastTransitionTime: "2022-07-25T15:02:49Z"
+    message: 'Some content in the namespace has finalizers remaining: finalizer.core.automation.ibm.com
+      in 1 resource instances'
+    reason: SomeFinalizersRemain
+    status: "True"
+    type: NamespaceFinalizersRemaining
+  phase: Terminating
